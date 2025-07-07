@@ -1,15 +1,14 @@
-import React from "react";
 import Typewriter from "typewriter-effect";
 import "./Type.css"
 
 function Type() {
   return (
     <>
-    <h2 className="type" >
+    <h2 className="type" id="type" >
     <Typewriter
       options={{
         strings: [
-          "Software Developer",
+          "DevOps Engineer",
           "Cloud Engineer",
           "Full Stack Developer",
         ],

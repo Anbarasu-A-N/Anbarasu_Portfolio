@@ -1,6 +1,6 @@
-.pdf-default-container{
+.pdf-default-container[id="resume"]{
   width: 680px; 
-  height: 530px; 
+  height: 550px; 
   margin-bottom: 20px;
   background-color: rgb(103, 103, 103);
   padding-top: 10px;
@@ -11,7 +11,7 @@
 h1[id='resume']{
   margin: 10px 0px 10px 0px;
 }
-.pdf-container-wrapper {
+.pdf-container-wrapper[id="resume"] {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,10 +19,10 @@ h1[id='resume']{
   height: 500px; 
 }
 
-.pdf-container {
+.pdf-container[id="resume"] {
   max-width: 100%; 
   width: 620px; 
-  height: 450px; 
+  height: 470px; 
   overflow-y: auto; 
   border: 1px solid #ccc; 
   background-color: white;
@@ -32,30 +32,29 @@ h1[id='resume']{
   margin-bottom: auto;
 }
 
-.pdf-container.visible {
+.pdf-container.visible[id="resume"] {
   display: block; 
 }
 
-.pdf-viewer {
+.pdf-viewer[id="resume"] {
   width: 100%;
   height: 100%; 
   
 }
 
-.pdf-controls {
+.pdf-controls[id="resume"] {
   display: flex;
   flex-direction: row; 
   justify-content: space-around; 
 }
 
-.hidden {
+.hidden[id="resume"] {
   display: none;
 }
 
 
-.form-button {
+.form-button[id="resume"] {
 display: block;
-margin-top: 15px;
 display: block;
 width: 200px;
 margin-left: 10px;
@@ -69,58 +68,69 @@ color: #fff;
 cursor: pointer;
 }
 
-button[id="form-button"]:hover {
+button[id="resume"]:hover {
 background-color: #f9a826;
 }
 
-.formfirst {
+.formfirst[id="resume"] {
 flex: 1; 
 margin-left: 30px;
 align-items: center;
 }
 
-.formsecond {
+.formsecond[id="resume"] {
 margin-top: 20px;
 width: 50%;
 height: 70vh;
 margin-right: 30px; 
 }
 
-.form {
+.form[id="resume"] {
 display: flex;
 }
 
 
-.formbgcolor{
+.formbgcolor[id="resume"]{
 background-color: #ccc;
+min-height: 120vh;
+overflow: auto;
 }
 
+
+@media screen and (max-width: 1400px) {
+  .ResumeFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+}
 
 
 @media screen and (max-width: 850px) {
 
-  .pdf-container-wrapper {
+  .pdf-container-wrapper[id="resume"] {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0px 20px 0px 20px;
-    height: 500px; /* Adjust as needed */
+    height: 430px; /* Adjust as needed */
   }
   
-  .pdf-default-container {
+  .pdf-default-container[id="resume"] {
     width: 500px; /* Adjust as needed */
-    height: 530px; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
     background-color: rgb(103, 103, 103);
     padding-top: 10px;
     padding-bottom: 30px;
     justify-content: center;
   }
   
-  .pdf-container {
+  .pdf-container[id="resume"] {
     max-width: 100%;
     width: 620px; /* Adjust as needed */
-    height: 450px; /* Adjust as needed */
+    height: 440px; /* Adjust as needed */
     overflow-y: auto;
     border: 1px solid #ccc;
     background-color: white;
@@ -130,26 +140,26 @@ background-color: #ccc;
     margin-bottom: auto;
   }
   
-  .pdf-container.visible {
+  .pdf-container.visible[id="resume"] {
     display: block;
   }
   
-  .pdf-viewer {
+  .pdf-viewer[id="resume"] {
     width: 100%;
     height: 100%;
   }
   
-  .pdf-controls {
+  .pdf-controls[id="resume"] {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
   
-  .hidden {
+  .hidden[id="resume"] {
     display: none;
   }
   
-  .form-button {
+  .form-button[id="resume"] {
     display: block;
     margin-top: 15px;
     width: 200px;
@@ -164,11 +174,11 @@ background-color: #ccc;
     cursor: pointer;
   }
   
-  button[id="form-button"]:hover {
+  button[id="resume"]:hover {
     background-color: #f9a826;
   }
   
-  .formfirst {
+  .formfirst[id="resume"] {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -177,35 +187,39 @@ background-color: #ccc;
     margin-right: auto;
   }
   
-  .formsecond {
+  .formsecond[id="resume"] {
     margin-top: 20px;
     width: 50%;
     height: 70vh;
     margin-right: 30px;
   }
   
-  .form {
+  .form[id="resume"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   
-  .formbgcolor {
+  .formbgcolor[id="resume"] {
     background-color: #ccc;
   }
   
+  .ResumeFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 
 @media screen and (max-width: 550px) {
 
-  .pdf-default-container{
-    width: 320px; 
-    height: 360px; 
+  .pdf-default-container[id="resume"] {
+    width: 395px; 
+    height: 405px; 
     margin-bottom: 20px;
     background-color: rgb(103, 103, 103);
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding-top: 5px;
    
   }
   
@@ -213,20 +227,20 @@ background-color: #ccc;
     margin: 10px 0px 10px 0px;
   }
 
-  .pdf-container-wrapper {
+  .pdf-container-wrapper[id="resume"] {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 330px; 
-    width: 280px;
-    margin: auto;
+    height: 350px; 
+    width: 395px;
+    margin: auto; /* Center the container */
     
   }
   
-  .pdf-container {
+  .pdf-container[id="resume"] {
     max-width: 100%; 
-    width: 300px; 
+    width: 450px; 
     height: 350px; 
     overflow-y: auto; 
     border: 1px solid #ccc; 
@@ -237,33 +251,32 @@ background-color: #ccc;
     margin-bottom: auto;
   }
   
-  .pdf-container.visible {
+  .pdf-container.visible[id="resume"] {
     display: block; 
-
   }
   
-  .pdf-viewer {
+  .pdf-viewer[id="resume"] {
     width: 100%;
     height: 100%; 
     
   }
   
-  .pdf-controls {
+  .pdf-controls[id="resume"] {
     display: flex;
     flex-direction: row; 
     justify-content: space-around; 
   }
   
-  .hidden {
+  .hidden[id="resume"] {
     display: none;
   }
   
   
-  .form-button {
+  .form-button[id="resume"] {
   display: block;
-  margin-top: 15px;
+  margin-top: 10px;
   display: block;
-  width: 200px;
+  width: 180px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px;
@@ -275,33 +288,39 @@ background-color: #ccc;
   cursor: pointer;
   }
   
-  button[id="form-button"]:hover {
+  button[id="resume"]:hover {
   background-color: #f9a826;
   }
   
-  .formfirst {
+  .formfirst[id="resume"] {
   flex: 1; 
   margin-left: 10px;
   margin-right: 10px;
   align-items: center;
   }
   
-  .formsecond {
+  .formsecond[id="resume"] {
   margin-top: 20px;
   width: 50%;
   height: 70vh;
   margin-right: 30px; 
   }
   
-  .form {
+  .form[id="resume"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   }
   
   
-  .formbgcolor{
+  .formbgcolor[id="resume"] {
   background-color: #ccc;
+  }
+
+  .ResumeFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   
   

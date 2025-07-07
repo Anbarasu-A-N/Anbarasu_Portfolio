@@ -7,10 +7,35 @@
   }
 }
 
-.div.leftcontainer,
-.div.rightcontainer {
+.leftcontainer[id="about"]{
+  width: auto;
+}
+
+.rightcontainer[id="about"] {
+  display: flex;
   text-align: center;
-  width: 100%; /* Make both containers take up the full width on small screens */
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.div.rightcontainerimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.rightcontainerimg a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent, keeps text consistent */
+}
+
+h3[id="about"] {
+  font-size: 1.5em;
+  margin-top: 5px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
 }
 
 .aboutcontainer {

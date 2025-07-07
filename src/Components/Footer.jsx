@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import SocialLinks from "./SocialLinks";
 
@@ -7,7 +6,7 @@ function Footer() {
     <footer>
       <p id='footer'>Contact Me:</p>
       <ul>
-        <li>Email: natarajananbarasu@gmail.com</li>
+        <li id='footer' >Email: natarajananbarasu@gmail.com</li>
 
         {/* 
 

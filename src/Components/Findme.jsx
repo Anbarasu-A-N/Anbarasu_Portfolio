@@ -7,7 +7,7 @@ function Findme() {
   return (
     <>
     <Navbar/>
-    <div className="body">
+    <div className="Find-body">
       <center>
         <h2 id="Find-container"><b>You can see here</b></h2>
       </center>

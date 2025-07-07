@@ -1,5 +1,3 @@
-
-import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import ProfilePhoto from "./Images/boy.jpg";
@@ -21,7 +19,7 @@ function Home() {
               <Type />
             </div>
             <Link to="/Projects" style={{ textDecoration: 'none' }}>
-              <button>View My Projects</button>
+              <button id="home" >View My Projects</button>
             </Link>
           </div>
           <div className="right-container">

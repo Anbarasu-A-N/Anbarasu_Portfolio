@@ -1,4 +1,4 @@
-nav {
+nav[id="navbar"] {
   background-color: #000000;
   color: #fff;
   display: flex;
@@ -6,21 +6,21 @@ nav {
   padding: 10px 20px;
 }
 
-.menu-button {
+.menu-button[id="navbar"] {
   cursor: pointer;
   display: none; /* Hide by default on larger screens */
   color: #fff;
   font-size: 1.5em;
 }
 
-nav ul {
+ul[id="navbar"] {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-nav li {
+li[id="navbar"] {
   margin: 0 20px;
 }
 
@@ -42,7 +42,7 @@ nav a:hover {
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 800px) {
-  nav li {
+  li[id="navbar"] {
     margin: 0 auto;
   }
 }
@@ -50,27 +50,27 @@ nav a:hover {
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 590px) {
-  .menu-button {
+  .menu-button[id="navbar"] {
     display: block; /* Show on smaller screens */
   }
 
-  nav ul {
+  ul[id="navbar"] {
     display: none;
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     background-color: #000;
     z-index: 2; /* This line is used to appear in front of the PDF(Resume Pdf) */
   }
 
-  nav ul.open {
+  ul[id="navbar"].open {
     display: flex;
     
   }
 
-  nav li {
+  li[id="navbar"] {
     margin: 0;
     text-align: center;
     

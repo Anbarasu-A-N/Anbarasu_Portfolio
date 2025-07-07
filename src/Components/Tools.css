@@ -1,21 +1,21 @@
-.tools-section {
+.tools-section[id="tools"] {
     padding: 20px;
   }
   
   /* Create a flex container for the row */
-  .toolsrow {
+  .toolsrow[id="tools"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* Adjust the alignment as needed */
   }
-h1[id="tools-icon"]{
+h1[id="tools"]{
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif ;
     margin-top: 2px;
     margin-bottom: 0px;
   }
   
-  .tools-icons {
+  .tools-icons[id="tools"] {
     text-align: center;
     margin: 15px;
     position: relative;
@@ -24,21 +24,21 @@ h1[id="tools-icon"]{
     height: 120px;
   }
   
-  .tools-icons p.tools {
-    margin-top: 0px;
+  .tools-icons p[id="tools"] {
+    margin-top: -10px;
     font-size: 15px;
   }
   
   /* Add a border and padding to create boxes around the icons */
-  .tools-icons {
+  .tools-icons[id="tools"] {
     border: 2px solid #555;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     border-radius: 8px;
     transition: box-shadow 0.3s; /* Add a smooth transition for the glow effect */
   }
   
   /* Add glow effect and hover styles */
-  .tools-icons:hover {
+  .tools-icons[id="tools"]:hover {
     background-color: #4d5254;
     color: #00eeff;
     border: 2px solid rgb(202, 220, 224);
@@ -46,8 +46,7 @@ h1[id="tools-icon"]{
 }
   
   /* Optional: Add a subtle shadow effect on hover */
-  .tools-icons:hover::before {
-    content: '';
+  .tools-icons[id="tools"]:hover::before {
     position: absolute;
     top: -5px;
     right: -5px;
@@ -60,11 +59,11 @@ h1[id="tools-icon"]{
   
   /* Adjust font size and padding for smaller screens */
 @media only screen and (max-width: 768px) {
-  .tools-icons p.tools {
-    margin-top: 0px;
+  .tools-icons p[id="tools"] {
+    margin-top: -10px;
     font-size: 8px;
   }
-  .tools-icons {
+  .tools-icons[id="tools"] {
     text-align: center;
     margin: 10px 1px 10px 1px;
     position: relative;
@@ -73,11 +72,11 @@ h1[id="tools-icon"]{
     height: 60px;
   }
 
-  .tools-section {
+  .tools-section[id="tools"] {
     padding: 20px;
   }
 
-h1[id="tools-icon"]{
+h1[id="tools"]{
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif ;
     margin-top: 2px;
@@ -85,7 +84,7 @@ h1[id="tools-icon"]{
   }
   
   /* Create a flex container for the row */
-  .toolsrow {
+  .toolsrow[id="tools"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

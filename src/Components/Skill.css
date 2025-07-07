@@ -1,21 +1,21 @@
-.skill-section {
+.skill-section[id="skills"] {
   padding: 20px;
 }
 
-.skillrow {
+.skillrow[id="skills"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-h1[id="skill-icon"]{
+h1[id="skills"]{
   font-size: 40px;
   font-family: 'Times New Roman', Times, serif;
   margin-top: 2px;
   margin-bottom: 0px;
 }
 
-.tech-icons {
+.tech-icons[id="skills"] {
   text-align: center;
   margin: 20px;
   position: relative;
@@ -24,27 +24,26 @@ h1[id="skill-icon"]{
   height: 120px;
 }
 
-.tech-icons p {
-  margin-top: 0px;
+.tech-icons p[id="skills"] {
+  margin-top: -10px;
   font-size: 15px;
 }
 
-.tech-icons {
+.tech-icons[id="skills"] {
   border: 2px solid #555;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
   border-radius: 8px;
   transition: box-shadow 0.3s;
 }
 
-.tech-icons:hover {
+.tech-icons[id="skills"]:hover {
   background-color: rgb(219, 219, 219);
   color: goldenrod;
   border: 2px solid rgb(202, 220, 224);
   box-shadow: 0 0 5px rgb(18, 255, 255), 0 0 20px rgb(137, 252, 252), 0 0 30px rgb(5, 243, 255);
 }
 
-.tech-icons:hover::before {
-  content: '';
+.tech-icons[id="skills"]:hover::before {
   position: absolute;
   top: -5px;
   right: -5px;
@@ -57,24 +56,24 @@ h1[id="skill-icon"]{
 
 
 @media (max-width: 768px) {
-  .skill-section {
+  .skill-section[id="skills"] {
     padding: 20px;
   }
   
-  .skillrow {
+  .skillrow[id="skills"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   
-  h1[id="skill-icon"]{
+  h1[id="skills"]{
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 2px;
     margin-bottom: 0px;
   }
   
-  .tech-icons {
+  .tech-icons[id="skills"] {
     text-align: center;
     margin: 10px 1px 10px 1px;
     position: relative;
@@ -84,8 +83,8 @@ h1[id="skill-icon"]{
   }
 
   
-  .tech-icons p {
-    margin-top: 0px;
+  .tech-icons p[id="skills"] {
+    margin-top: -10px;
     font-size: 8px;
   }
 }

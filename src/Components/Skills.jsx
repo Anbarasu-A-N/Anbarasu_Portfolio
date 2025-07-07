@@ -1,7 +1,6 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { DiJavascript1, DiReact, DiNodejs, DiGit, DiJava } from "react-icons/di";
-import { SiMysql, SiUnrealengine, SiPython, SiPostgresql, SiDocker, SiKubernetes  } from "react-icons/si";
+import { DiJavascript1, DiReact, DiGit, DiJava } from "react-icons/di";
+import { SiMysql, SiPython, SiPostgresql, SiDocker, SiKubernetes, SiTerraform, SiLinux, SiJenkins } from "react-icons/si";
 import { FaAws } from 'react-icons/fa';
 
 import "./Skill.css";
@@ -10,60 +9,64 @@ function Skill() {
   return (
     <div>
       <center>
-      <h1 id="skill-icon">Professional Skillset</h1>
+        <h1 id="skills">Professional Skillset</h1>
       </center>
-    <Container fluid className="skill-section">
-      <Row className="skillrow">
-        <Col className="tech-icons"  >
-          <DiJava /> {/* Java */}
-          <p>Java</p>
-        </Col>
-        <Col className="tech-icons"  >
-          <SiMysql /> {/* MySQL */}
-          <p>Mysql</p>
-        </Col>
-        <Col className="tech-icons" >
-          <DiJavascript1 /> {/* JavaScript */}
-          <p>JavaScript</p>
-        </Col>
-        <Col className="tech-icons"  >
-          <DiNodejs /> {/* Node.js */}
-          <p>Node.js</p>
-        </Col>
-        <Col className="tech-icons"  >
-          <DiReact /> {/* React */}
-          <p>React</p>
-        </Col>
-        <Col className="tech-icons"  >
-          <DiGit /> {/* Git */}
-          <p>Git</p>
-        </Col>
-        <Col className="tech-icons"  >
-          <SiPython /> {/* Python */}
-          <p>Python</p>
-        </Col>
-        <Col className="tech-icons" >
-          <FaAws /> {/* AWS Cloud */}
-          <p>AWS</p>
-        </Col>
-        <Col className="tech-icons" styl>
-          <SiUnrealengine /> {/* Unity Game Engine */}
-          <p>Unreal Engine</p>
-        </Col>
-        <Col className="tech-icons" >
-          <SiPostgresql /> {/* PostgreSQL */}
-          <p>PostgreSQL</p>
-        </Col>
-        <Col className="tech-icons" >
-          <SiDocker /> {/* Docker */}
-          <p>Docker</p>
-        </Col>
-        <Col className="tech-icons" >
-          <SiKubernetes /> {/* Kubernetes */}
-          <p>Kubernetes</p>
-        </Col>
-      </Row>
-    </Container>
+      <Container fluid className="skill-section" id="skills">
+        <Row className="skillrow" id="skills">
+          <Col className="tech-icons" id="skills">
+            <DiJava />
+            <p id="skills">Java</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiMysql />
+            <p id="skills">MySQL</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <DiJavascript1 />
+            <p id="skills">JavaScript</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <DiReact />
+            <p id="skills">React</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <DiGit />
+            <p id="skills">Git</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiPython />
+            <p id="skills">Python</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <FaAws />
+            <p id="skills">AWS</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiPostgresql />
+            <p id="skills">PostgreSQL</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiDocker />
+            <p id="skills">Docker</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiKubernetes />
+            <p id="skills">Kubernetes</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiTerraform />
+            <p id="skills">Terraform</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiLinux />
+            <p id="skills">Linux</p>
+          </Col>
+          <Col className="tech-icons" id="skills">
+            <SiJenkins />
+            <p id="skills">Jenkins</p>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

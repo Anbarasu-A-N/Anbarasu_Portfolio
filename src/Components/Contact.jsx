@@ -107,25 +107,26 @@ const Contact = () => {
 
   return (
     <>
+    <div className="Contactbody">
       <Navbar />
       <div className="contactbody">
         <div className="contact-form">
-          <h2>Contact Me</h2>
+          <h2 id="contact">Contact Me</h2>
           {messageText && <p className="message">{messageText}</p>}
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="fullname">Full Name:</label>
+            <div className="form-group" id="contact">
+              <label id="contact" htmlFor="fullname">Full Name:</label>
               <input
-                type="text"
+                type="contactfullname"
                 id="fullname"
                 value={fullname}
                 onChange={handleFullnameChange}
                 style={{ marginBottom: 10 }}
                 required
               />
-              <label htmlFor="recipient">Your Gmail Id:</label>
+              <label id="contact" htmlFor="recipient">Your Gmail Id:</label>
               <input
-                type="email"
+                type="contactemail"
                 id="recipient"
                 value={recipient}
                 onChange={handleRecipientChange}
@@ -134,9 +135,9 @@ const Contact = () => {
               {!isValidEmail && <p className="error-message">Invalid email address</p>}
             </div>
             <div className="form-group">
-              <label htmlFor="subject">Subject:</label>
+              <label id="contact" htmlFor="subject">Subject:</label>
               <input
-                type="text"
+                type="contacttext"
                 id="subject"
                 value={subject}
                 onChange={handleSubjectChange}
@@ -144,22 +145,26 @@ const Contact = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message:</label>
+              <label id="contact" htmlFor="message">Message:</label>
               <textarea
-                id="message"
+                id="contact"
                 value={message}
                 onChange={handleMessageChange}
                 required
               ></textarea>
             </div>
-            <button type="submit" disabled={loading}>
+            <button id="contact" type="submit" disabled={loading}>
               {loading ? 'Sending...' : 'Send Gmail'}
             </button>
-            <h6>(Note): This Email is sent to your Email ID by using My Gmail ID.</h6>
+            <br></br>
+            <h6 id="contact">(Note): This Email is sent to your Email by using My Gmail ID.</h6>
           </form>
         </div>
       </div>
+      <div className="ContactFooter" id="contact">
       <Footer />
+      </div>
+      </div>
     </>
   );
 };

@@ -31,7 +31,7 @@ function SocialLinks() {
       <img src={Twitter} alt="Link-Img" style={{ width: '40px', height: '40px' }} />
       </a>
 
-      <a href="https://github.com/Mr-Anbarasu-AN">
+      <a href="https://github.com/Anbarasu-A-N">
       <img src={Github} alt="Link-Img" style={{ width: '40px', height: '40px' }} />
       </a>
      

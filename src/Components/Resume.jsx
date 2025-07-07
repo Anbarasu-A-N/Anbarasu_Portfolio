@@ -30,17 +30,17 @@ const Resume = () => {
 
   return (
     <>
+      <div className='formbgcolor' id="resume">
       <Navbar />
-      <div className='formbgcolor'>
-        <div className="form">
-          <div className='formfirst'>
-            <h1 className="resume" id='resume' style={{ padding: 0, fontFamily: 'Times New Roman', textAlign: 'center' }}>
+        <div className="form" id="resume">
+          <div className="formfirst" id="resume">
+            <h1 className="resume" id="resume" style={{ padding: 0, fontFamily: 'Times New Roman', textAlign: 'center' }}>
               RESUME PDF
             </h1>
-            <div className='pdf-default-container'>
-              <div className="pdf-container-wrapper">
-                <div className={`pdf-container ${showPdf ? 'visible' : 'hidden'}`}>
-                  <div className="pdf-viewer">
+            <div className="pdf-default-container" id="resume">
+              <div className="pdf-container-wrapper" id="resume">
+                <div className={`pdf-container ${showPdf ? 'visible' : 'hidden'}`} id="resume">
+                  <div className="pdf-viewer" id="resume">
                     {showPdf && (
                       <Worker
                         workerUrl={new URL('/pdf.worker.min.js', import.meta.url).href} // Use pdf.worker.min.js
@@ -51,19 +51,21 @@ const Resume = () => {
                   </div>
                 </div>
               </div>
-              <div className="pdf-controls">
-                <button className="form-button" id="form-button" onClick={() => setShowPdf(!showPdf)}>
+              <div className="pdf-controls" id="resume">
+                <button className="form-button" id="resume" onClick={() => setShowPdf(!showPdf)}>
                   {showPdf ? 'Hide PDF' : 'View PDF'}
                 </button>
-                <button className="form-button" id="form-button" onClick={handleDownload}>
+                <button className="form-button" id="resume" onClick={handleDownload}>
                   Download PDF
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      <div className="ResumeFooter" id="resume">
       <Footer />
+      </div>
+      </div>
     </>
   );
 };

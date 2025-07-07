@@ -1,4 +1,4 @@
-h2.type {
+h2.type[id="type"] {
     font-size: clamp(1.8rem , 2vw, 3rem);
     margin: -10px auto 10px auto;
     padding-top: 30px;
@@ -8,7 +8,7 @@ h2.type {
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 800px) {
-  h2.type {
+  h2.type[id="type"] {
     font-size: clamp(1.5rem , 2vw, 3rem);
     margin: 10px 0px 10px 0px;
     padding-top: 0px;
