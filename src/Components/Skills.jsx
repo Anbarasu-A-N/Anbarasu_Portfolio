@@ -7,7 +7,7 @@ import "./Skill.css";
 
 function Skill() {
   return (
-    <div>
+    <div style={{backgroundColor:"black",  marginTop: "-5px",top :-1}}>
       <center>
         <h1 id="skills">Professional Skillset</h1>
       </center>

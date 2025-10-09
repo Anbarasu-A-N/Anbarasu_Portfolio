@@ -3,7 +3,7 @@
   flex-wrap: wrap; 
   justify-content: space-around;
   padding: 20px;
-  margin: 0px auto 150px auto ;
+  margin: 0px auto 100px auto ;
 }
 
 
@@ -30,7 +30,7 @@
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -40,8 +40,8 @@
   align-items: center;
   width: 260px;
   height: 260px;
-  border: 2px dashed rgb(0, 0, 0);
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+  border: 2px dashed rgb(173, 173, 173);
+  box-shadow: 0 0 10px rgb(61, 61, 61);
   border-radius: 50%;
 }
 
@@ -63,7 +63,7 @@ h1.Hi {
   margin-top: 0px;
   padding-top: 15px;
   margin-bottom: 0;
-  background-color: rgb(202, 220, 224);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -72,15 +72,19 @@ h1.Name {
   font-size: clamp(2rem , 5vw, 3rem);
   margin-top: 20px;
   margin-bottom: 0;
-  background-color: rgb(202, 220, 224);
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
 
 div.homebody {
-  background-color: rgb(202, 220, 224);
-  height: 90vh;
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+  max-height: 150vh;
   margin-top: 0px;
+  position: relative; /* Added: Contains absolute children like particles */
+  overflow: hidden; /* Optional: Prevents particles from showing outside if needed */
 }
 
 button[id="home"] {
@@ -100,12 +104,13 @@ button[id="home"]:hover {
   background-color: #3e8e41;
 }
 
+/*
 .FooterBottom {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
+*/
 
 
 @media only screen and (max-width: 800px) {
@@ -120,7 +125,6 @@ button[id="home"]:hover {
     font-size: clamp(2rem , 5vw, 3rem);
     margin-top: 0;
     margin-bottom: 0;
-    background-color: rgb(202, 220, 224);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
@@ -129,13 +133,12 @@ button[id="home"]:hover {
     font-size: clamp(2rem , 5vw, 3rem);
     margin: 30px 0px 0px 0px;
     margin-bottom: 0;
-    background-color: rgb(202, 220, 224);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
   
   div.homebody {
-    background-color: rgb(202, 220, 224);
+    background-color: rgb(0, 0, 0);
     height: 90vh;
   }
   
@@ -178,7 +181,6 @@ button[id="home"]:hover {
     font-size: clamp(2rem , 5vw, 3rem);
     margin-top: 0;
     margin-bottom: 0;
-    background-color: rgb(202, 220, 224);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
@@ -188,13 +190,12 @@ button[id="home"]:hover {
     padding-bottom: 10px;
     margin: 0px 0px 0px 0px;
     margin-bottom: 0;
-    background-color: rgb(202, 220, 224);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
   
   div.homebody {
-    background-color: rgb(202, 220, 224);
+    background-color: rgb(0, 0, 0);
     height: 90vh;
   }
   
@@ -249,7 +250,7 @@ img:hover[alt="Profile"] {
   transform: scale(1.2);
 }
 
-  button {
+  button[id="home"] {
     display: block;
     margin: 10px auto 0px auto; 
     padding: 10px 15px;
@@ -277,7 +278,6 @@ img:hover[alt="Profile"] {
     font-size: clamp(1.5rem , 5vw, 3rem);
     margin-top: 0;
     margin-bottom: 0;
-    background-color: rgb(202, 220, 224);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
@@ -286,13 +286,12 @@ img:hover[alt="Profile"] {
     font-size: clamp(1.5rem , 5vw, 3rem);
     margin: 0px 0px 0px 0px;
     margin-bottom: 0;
-    background-color: rgb(202, 220, 224);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
   
   div.homebody {
-    background-color: rgb(202, 220, 224);
+    background-color: rgb(0, 0, 0);
     height: 90vh;
   }
   

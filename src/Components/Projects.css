@@ -1,13 +1,21 @@
 .Project-body[id="project"] {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: rgb(202, 220, 224);
+  padding: 20px 20px 20px 20px;
+  background-color: rgb(0, 0, 0);
   height: 100%;
+  margin-top: -5px;
+  margin-bottom: 0px;
 }
+
+  .ProjectFooter {
+    margin-top: -5px;
+    bottom: 0;
+    width: 100%;
+  }
 
 .Project[id="project"] {
   text-align: center;
-  color: #333;
+  color: #c4c4c4;
 }
 
 /* SCROLLING STYLES */
@@ -108,7 +116,7 @@
 .project-description[id="project"] {
   padding: 15px;
   font-size: 14px;
-  color: #333;
+  color: #151515;
   overflow-y: auto;
   max-height: 300px;
   text-align: left;
@@ -140,7 +148,7 @@
     height: 140px; /* Reduce height to make room for title */
   }
   .ProjectFooter {
-    position: fixed;
+    margin-top: -5px;
     bottom: 0;
     width: 100%;
   }
@@ -161,7 +169,7 @@
     padding: 10px 8px 5px 8px;
   }
   .ProjectFooter {
-    position: fixed;
+    margin-top: -5px;
     bottom: 0;
     width: 100%;
   }
@@ -185,7 +193,7 @@
     display: block;
   }
   .ProjectFooter {
-    position: fixed;
+    margin-top: -5px;
     bottom: 0;
     width: 100%;
   }

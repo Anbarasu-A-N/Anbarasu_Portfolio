@@ -10,6 +10,7 @@ import "./Tools.css";
 function Tools() {
   return (
     <>
+    <div style={{backgroundColor:"black",  marginTop: "-5px",top :-1}}>
     <center>
       <h1 id="tools">Software Expertise</h1>
       </center>
@@ -71,6 +72,7 @@ function Tools() {
         </Col>
       </Row>
     </Container>
+    </div>
     </>
   );
 }

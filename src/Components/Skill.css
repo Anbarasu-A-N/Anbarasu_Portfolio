@@ -1,5 +1,6 @@
 .skill-section[id="skills"] {
   padding: 20px;
+  background-color: black;
 }
 
 .skillrow[id="skills"] {
@@ -13,6 +14,8 @@ h1[id="skills"]{
   font-family: 'Times New Roman', Times, serif;
   margin-top: 2px;
   margin-bottom: 0px;
+  background-color: black;
+  color: rgb(255, 255, 255);
 }
 
 .tech-icons[id="skills"] {
@@ -22,6 +25,7 @@ h1[id="skills"]{
   font-size: 80px;
   width: 150px;
   height: 120px;
+  color: rgb(255, 255, 255);
 }
 
 .tech-icons p[id="skills"] {
