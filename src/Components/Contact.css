@@ -50,13 +50,16 @@ button[id="contact"][type="submit"] {
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  background-color: #ff9900;
+  background-color: #000000;
   color: #fff;
   cursor: pointer;
+  border: 2px solid #ccc; 
 }
 
 button[id="contact"][type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000; 
 }
 
 

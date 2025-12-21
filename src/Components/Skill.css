@@ -42,7 +42,7 @@ h1[id="skills"]{
 
 .tech-icons[id="skills"]:hover {
   background-color: rgb(219, 219, 219);
-  color: goldenrod;
+  color: rgb(0, 0, 0);
   border: 2px solid rgb(202, 220, 224);
   box-shadow: 0 0 5px rgb(18, 255, 255), 0 0 20px rgb(137, 252, 252), 0 0 30px rgb(5, 243, 255);
 }

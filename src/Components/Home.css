@@ -91,17 +91,19 @@ button[id="home"] {
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
-  background-color: #ff9900;
+  background-color: #494949;
+  border: 2px solid #ffffff; 
   font-family: 'Times New Roman', Times, serif;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.2em;
   border-radius: 10px;
-  border: none;
   cursor: pointer;
 }
 
 button[id="home"]:hover {
-  background-color: #3e8e41;
+  background-color: #ffffff;
+  border: 2px solid #000000; 
+  color: #000000;
 }
 
 /*

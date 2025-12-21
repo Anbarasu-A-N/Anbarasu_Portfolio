@@ -12,8 +12,8 @@ function SocialLinks() {
     <div className="sociallink">
       
       
-      <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
-      <img src={Mail} alt="Link-Img" style={{ width: '40px', height: '40px' }} />
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=natarajananbarasu@gmail.com" target="_blank" rel="noopener noreferrer">
+      <img src={Mail} alt="Link-Img" style={{ width: '40px', height: '40px' }} loading="lazy" />
       </a>
      
 
