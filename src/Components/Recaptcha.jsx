@@ -242,7 +242,7 @@ const Recaptcha = ({ setVerificationSuccess }) => {
                 I am not a robot
               </label>
             </div>
-            {verificationMessage && <p>{verificationMessage}</p>}
+            {verificationMessage && <p id="recaptchaverify">{verificationMessage}</p>}
           </div>
         </div>
         <center>
