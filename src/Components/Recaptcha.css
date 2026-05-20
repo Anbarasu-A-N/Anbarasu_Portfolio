@@ -128,9 +128,10 @@ h3[id="recaptcha"] {
 p[id="recaptchaverify"] {
     font-weight: bold;
     text-align: left;
-    font-size: 5px;
+    font-size: 25px;
     font-weight: 600;
     color: rgb(255, 255, 255);
+    margin: 20px 30px 10px 10px;
 }
 
 
