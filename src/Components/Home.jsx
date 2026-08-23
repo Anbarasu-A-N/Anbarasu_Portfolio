@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ProfilePhoto from "./Images/boy.jpg";
 import Type from "./Type";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import { useEffect, useState } from "react"; // For init state
 import Particles, { initParticlesEngine } from "@tsparticles/react"; // Updated imports
 import { loadSlim } from "@tsparticles/slim"; // Slim loader for efficiency
@@ -134,9 +133,6 @@ function Home() {
             </div>
           </div>
         </div>
-      <div className="FooterBottom" >
-        <Footer />
-      </div>
       </div>
     </>
   );

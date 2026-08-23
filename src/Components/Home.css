@@ -3,7 +3,7 @@
   flex-wrap: wrap; 
   justify-content: space-around;
   padding: 20px;
-  margin: 0px auto 100px auto ;
+  margin: 30px auto 100px auto ;
 }
 
 
@@ -60,7 +60,7 @@ img:hover[alt="Profile"] {
 
 h1.Hi {
   font-size: clamp(2rem , 5vw, 3rem);
-  margin-top: 0px;
+  margin-top: 50px;
   padding-top: 15px;
   margin-bottom: 0;
   color: rgb(255, 255, 255);
@@ -80,8 +80,8 @@ h1.Name {
 
 div.homebody {
   background-color: rgb(0, 0, 0);
-  min-height: 100vh;
-  max-height: 150vh;
+  min-height: 95vh;
+  max-height: 100vh;
   margin-top: 0px;
   position: relative; /* Added: Contains absolute children like particles */
   overflow: hidden; /* Optional: Prevents particles from showing outside if needed */
@@ -141,7 +141,7 @@ button[id="home"]:hover {
   
   div.homebody {
     background-color: rgb(0, 0, 0);
-    height: 90vh;
+    height: 100vh;
   }
   
   .left-container {
@@ -196,10 +196,7 @@ button[id="home"]:hover {
     font-family: 'Times New Roman', Times, serif;
   }
   
-  div.homebody {
-    background-color: rgb(0, 0, 0);
-    height: 90vh;
-  }
+
   
   .left-container {
     padding: 5px;
@@ -291,11 +288,7 @@ img:hover[alt="Profile"] {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
-  
-  div.homebody {
-    background-color: rgb(0, 0, 0);
-    height: 90vh;
-  }
+
   
   .left-container {
     padding: 5px;

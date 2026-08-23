@@ -1,5 +1,278 @@
 
 
+import "./Projects.css";
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+
+const miniProjects = [
+  {
+    url: "https://re-captcha.netlify.app/",
+    title: "Re-Captcha",
+    description: "Google reCAPTCHA demo using React with form validation and token verification.",
+    isGH: false,
+  },
+  {
+    url: "https://birthday-gift-boxes-generator.netlify.app/",
+    title: "Whip-Up Gift Box",
+    description: "Generates birthday gift ideas with a fun animated UI using JavaScript.",
+    isGH: false,
+  },
+  {
+    url: "https://serverless-function-for-send-mail.netlify.app/",
+    title: "Email Sender",
+    description: "A serverless email sender using Netlify Functions and Nodemailer.",
+    isGH: false,
+  },
+  {
+    url: "https://react-for-card-flip.netlify.app/",
+    title: "React Card Flip",
+    description: "A card flipping game built with React showing animation and state control.",
+    isGH: false,
+  },
+  {
+    url: "https://weather-report-using-html.netlify.app/",
+    title: "Weather Report",
+    description: "Fetches weather data via an API and displays it with simple HTML + JS.",
+    isGH: false,
+  },
+  {
+    url: "https://speech-2-text-converter.netlify.app/",
+    title: "Speech → Text",
+    description: "Speech-to-text converter using the Web Speech API in JavaScript.",
+    isGH: false,
+  },
+  {
+    url: "https://anbarasu-number-guessing-game.netlify.app/",
+    title: "Number Guessing Game",
+    description: "A JavaScript-based game where the user guesses a random number.",
+    isGH: false,
+  },
+  {
+    url: "https://qr-code-generator-in-react.netlify.app/",
+    title: "QR Code Generator",
+    description: "QR code generator app built with React and the qrcode.react library.",
+    isGH: false,
+  },
+];
+
+const fullStackProjects = [
+  {
+    url: "https://github.com/Anbarasu-A-N/User_Docker",
+    title: "User Management — Dockerized",
+    description: "Full-stack user management with Spring Boot, React, PostgreSQL, and Docker.",
+    isGH: true,
+  },
+  {
+    url: "https://github.com/Anbarasu-A-N/Anbarasu_portfolio_docker",
+    title: "Portfolio — Dockerized",
+    description: "React portfolio containerised and deployed with Docker and GitHub Actions.",
+    isGH: true,
+  },
+  {
+    url: "https://github.com/Anbarasu-A-N/Agriculture_Loan_Portal",
+    title: "Agriculture Loan Portal",
+    description: "Java + MySQL portal for applying, tracking, and approving agriculture loans.",
+    isGH: true,
+  },
+  {
+    url: "https://github.com/Anbarasu-A-N/Travel_Planner_Console_App",
+    title: "Travel Planner CLI",
+    description: "A Java CLI app to plan trips, add itineraries, and manage travel budgets.",
+    isGH: true,
+  },
+  {
+    url: "https://github.com/Anbarasu-A-N/Chatbot",
+    title: "Chatbot",
+    description: "An AI-powered chatbot using JavaScript and simple NLP logic.",
+    isGH: true,
+  },
+  {
+    url: "https://github.com/Anbarasu-A-N/HomeAppliance",
+    title: "Home Appliance Management",
+    description: "Spring Boot REST API for managing smart home appliances.",
+    isGH: true,
+  },
+];
+
+/* ── GitHub SVG Icon ─────────────────────────── */
+function GithubIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      style={{ width: 48, height: 48, color: "#6c63ff" }}
+    >
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+    </svg>
+  );
+}
+
+/* ── Single Project Card ─────────────────────── */
+function ProjectCard({ project }) {
+  return (
+    <div className="proj-card" onClick={() => window.open(project.url, "_blank")}>
+      {/* Thumbnail */}
+      <div className="proj-thumb">
+        {project.isGH ? (
+          <div className="proj-thumb-gh">
+            <GithubIcon />
+            <span>GitHub Repository</span>
+          </div>
+        ) : (
+          <iframe
+            src={project.url}
+            title={project.title}
+            className="proj-iframe"
+            sandbox="allow-scripts allow-same-origin"
+            loading="lazy"
+            tabIndex="-1"
+          />
+        )}
+        {/* Hover overlay */}
+        <div className="proj-thumb-overlay">
+          <span className="proj-open-btn">
+            {project.isGH ? "View on GitHub ↗" : "Open Live ↗"}
+          </span>
+        </div>
+      </div>
+
+      {/* Body */}
+      <div className="proj-body">
+        <h3 className="proj-title">{project.title}</h3>
+        <p className="proj-desc">{project.description}</p>
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="proj-link"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {project.isGH ? "View on GitHub" : "Open Live"} →
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* ── Projects Page ───────────────────────────── */
+function Projects() {
+  const [init, setInit] = useState(false);
+  const [activeTab, setActiveTab] = useState("mini");
+
+  /* tsParticles — exactly your original config */
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
+
+  const particlesOptions = {
+    background: { color: { value: "transparent" } },
+    fpsLimit: 120,
+    particles: {
+      number: { value: 300, density: { enable: true, area: 80 } },
+      color: { value: "#ffffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: { min: 1, max: 3 } },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#000000",
+        opacity: 0,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: false,
+        straight: false,
+        outModes: { default: "out" },
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
+        resize: { enable: true },
+      },
+      modes: {
+        repulse: { distance: 200, duration: 0.4 },
+        push: { quantity: 4 },
+      },
+    },
+    detectRetina: true,
+  };
+
+  const list = activeTab === "mini" ? miniProjects : fullStackProjects;
+
+  return (
+    <>
+      <Navbar />
+
+      <div className="proj-page">
+        {/* ── Particles background (your original) ── */}
+        {init && (
+          <Particles
+            id="tsparticles-projects"
+            options={particlesOptions}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 0,
+            }}
+          />
+        )}
+
+        {/* ── Content ── */}
+        <div className="proj-content">
+          {/* Section header */}
+          <div className="proj-header">
+            <h1 className="proj-heading">
+              My Project
+            </h1>
+          </div>
+
+          {/* Tabs */}
+          <div className="proj-tabs">
+            <button
+              className={`proj-tab${activeTab === "mini" ? " active" : ""}`}
+              onClick={() => setActiveTab("mini")}
+            >
+              Mini / Frontend
+            </button>
+            <button
+              className={`proj-tab${activeTab === "fs" ? " active" : ""}`}
+              onClick={() => setActiveTab("fs")}
+            >
+              Full Stack / GitHub
+            </button>
+          </div>
+
+          {/* Cards grid */}
+          <div className="proj-grid">
+            {list.map((project, i) => (
+              <ProjectCard key={`${project.url}-${i}`} project={project} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+}
+
+export default Projects;
+
+/*
 
 import "./Projects.css";
 import Navbar from './Navbar';
@@ -219,7 +492,7 @@ function Projects() {
     <>
       <Navbar />
       <div className="Project-body" id="project">
-        {/* Particles background layer - only render if initialized */}
+        {}
         {init && (
           <Particles
             id="tsparticles-projects" // Unique ID to avoid conflicts
@@ -261,3 +534,4 @@ function Projects() {
 
 export default Projects;
 
+*/
